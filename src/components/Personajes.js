@@ -17,7 +17,7 @@ const Personajes = () => {
     <h1>Personajes</h1>
     <div className="card-container">
       {personajes.map(personaje => (
-        <Link key={personaje.id} to={`/111-Routing/personajes/${personaje.id}`}>
+        <Link key={personaje.id} to={`/personajes/${personaje.id}`}>
           <div className="card">
             <h2>{personaje.name}</h2>
             <h3>{personaje.status}</h3>
