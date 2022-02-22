@@ -11,7 +11,7 @@ const DetallePersonaje = () => {
     fetch(`https://rickandmortyapi.com/api/character/${params.idPersonaje}`)
     .then(res => res.json())
     .then(data => setPersonaje(data))
-  }, [] )
+  }, [params.idPersonaje] )
 
   console.log(personaje)
   return(
@@ -20,7 +20,7 @@ const DetallePersonaje = () => {
       <article className="detalle">
         <h2>NOmbre:{params.idPersonaje}</h2>
         <h3>Status:{personaje.status}</h3>
-        <img src={personaje.image}/>
+        <img src={personaje.image} alt="imagen de rick and morty" />
       </article>
     </div>
   )
